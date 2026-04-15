@@ -1,0 +1,9 @@
+services:
+  rva_eng_web_tmp:
+    build: .
+    container_name: rva_eng_web_tmp
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
