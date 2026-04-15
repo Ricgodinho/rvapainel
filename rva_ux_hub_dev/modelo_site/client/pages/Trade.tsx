@@ -1,4 +1,6 @@
 import Layout from "@/components/Layout";
+import CollectionCard from "@/components/CollectionCard";
+import HelpTooltip from "@/components/HelpTooltip";
 import {
   TrendingUp,
   BarChart3,
@@ -14,24 +16,28 @@ export default function Trade() {
       title: "Análise de Mercado",
       description:
         "Acesse análises em tempo real do mercado. Receba insights sobre tendências, oportunidades e movimentos de preços.",
+      helpText: "Recurso para análise completa do mercado de criptomoedas em tempo real, incluindo tendências, padrões e oportunidades de trading.",
     },
     {
       icon: Wallet,
       title: "Gestão de Portfolio",
       description:
         "Acompanhe seus investimentos e operações. Monitore rentabilidade, riscos e rebalanceamento de posições.",
+      helpText: "Ferramentas para acompanhar e gerenciar seu portfólio de investimentos, monitorar rentabilidade e otimizar alocação.",
     },
     {
       icon: BarChart3,
       title: "Indicadores Técnicos",
       description:
         "Analise padrões técnicos e indicadores. Identifique sinais de compra e venda através de análise técnica avançada.",
+      helpText: "Acesso a indicadores técnicos avançados para análise de gráficos e identificação de sinais de trading.",
     },
     {
       icon: PieChart,
       title: "Alocação de Ativos",
       description:
         "Optimize a distribuição de seus ativos. Receba recomendações de alocação baseadas em seu perfil de risco.",
+      helpText: "Recomendações de alocação otimizadas de ativos baseadas em seu perfil de risco e objetivos financeiros.",
     },
   ];
 
@@ -113,11 +119,17 @@ export default function Trade() {
 
           {/* Features Grid */}
           <div className="mb-16">
-            <h2 className="text-2xl font-bold text-foreground mb-8">
-              Recursos Principais
-            </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {features.map((feature) => {
+            <div className="flex items-center gap-2 mb-8">
+              <h2 className="text-2xl font-bold text-foreground">
+                Recursos Principais
+              </h2>
+              <HelpTooltip
+                label="Recursos Principais"
+                helpText="Estes são os principais recursos disponíveis no módulo Trade. Cada um oferece funcionalidades especializadas para análise e operações de trading."
+              />
+            </div>
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              {features.map((feature: any) => {
                 const Icon = feature.icon;
                 return (
                   <div
@@ -128,10 +140,16 @@ export default function Trade() {
                       <div className="rounded-lg bg-cyan-500/20 p-3 text-cyan-400">
                         <Icon className="w-6 h-6" />
                       </div>
-                      <div>
-                        <h3 className="font-semibold text-foreground mb-2">
-                          {feature.title}
-                        </h3>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-2">
+                          <h3 className="font-semibold text-foreground">
+                            {feature.title}
+                          </h3>
+                          <HelpTooltip
+                            label={feature.title}
+                            helpText={feature.helpText}
+                          />
+                        </div>
                         <p className="text-sm text-muted-foreground">
                           {feature.description}
                         </p>
@@ -141,13 +159,22 @@ export default function Trade() {
                 );
               })}
             </div>
+
+            {/* Collection Card */}
+            <CollectionCard />
           </div>
 
           {/* Strategies */}
           <div className="mb-16">
-            <h2 className="text-2xl font-bold text-foreground mb-8">
-              Estratégias de Trading
-            </h2>
+            <div className="flex items-center gap-2 mb-8">
+              <h2 className="text-2xl font-bold text-foreground">
+                Estratégias de Trading
+              </h2>
+              <HelpTooltip
+                label="Estratégias de Trading"
+                helpText="Diferentes estratégias de trading com variados níveis de risco e retorno. Escolha a que melhor se adequa ao seu perfil e objetivos."
+              />
+            </div>
             <div className="space-y-4">
               {strategies.map((strategy) => (
                 <div
@@ -172,9 +199,15 @@ export default function Trade() {
 
           {/* Dashboard Preview */}
           <div className="mb-16">
-            <h2 className="text-2xl font-bold text-foreground mb-8">
-              Painel de Análise
-            </h2>
+            <div className="flex items-center gap-2 mb-8">
+              <h2 className="text-2xl font-bold text-foreground">
+                Painel de Análise
+              </h2>
+              <HelpTooltip
+                label="Painel de Análise"
+                helpText="Visualização centralizada com gráficos, indicadores técnicos e análises em tempo real para tomadas de decisão rápidas."
+              />
+            </div>
             <div className="rounded-lg border border-border bg-card p-6 sm:p-8">
               <div className="bg-muted rounded-lg p-6 text-center">
                 <BarChart3 className="w-12 h-12 text-muted-foreground mx-auto mb-4 opacity-50" />

@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import HelpTooltip from "@/components/HelpTooltip";
 import { HelpCircle, FileText, Navigation, Settings } from "lucide-react";
 
 export default function Help() {
@@ -113,9 +114,15 @@ export default function Help() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Help Sections */}
           <div className="mb-16">
-            <h2 className="text-2xl font-bold text-foreground mb-8">
-              Seções de Ajuda
-            </h2>
+            <div className="flex items-center gap-2 mb-8">
+              <h2 className="text-2xl font-bold text-foreground">
+                Seções de Ajuda
+              </h2>
+              <HelpTooltip
+                label="Seções de Ajuda"
+                helpText="Diferentes seções de documentação para ajudá-lo a navegar e usar todas as funcionalidades do RVA Hub."
+              />
+            </div>
             <div className="grid md:grid-cols-3 gap-6">
               {sections.map((section) => {
                 const Icon = section.icon;
@@ -151,9 +158,15 @@ export default function Help() {
 
           {/* Roadmap */}
           <div className="mb-16">
-            <h2 className="text-2xl font-bold text-foreground mb-8">
-              Plano de Crescimento
-            </h2>
+            <div className="flex items-center gap-2 mb-8">
+              <h2 className="text-2xl font-bold text-foreground">
+                Plano de Crescimento
+              </h2>
+              <HelpTooltip
+                label="Plano de Crescimento"
+                helpText="Roadmap de desenvolvimento do RVA Hub mostrando as fases de implementação e futuras funcionalidades."
+              />
+            </div>
             <div className="space-y-4">
               {growth.map((phase) => (
                 <div
@@ -186,9 +199,15 @@ export default function Help() {
 
           {/* FAQs */}
           <div>
-            <h2 className="text-2xl font-bold text-foreground mb-8">
-              Perguntas Frequentes
-            </h2>
+            <div className="flex items-center gap-2 mb-8">
+              <h2 className="text-2xl font-bold text-foreground">
+                Perguntas Frequentes
+              </h2>
+              <HelpTooltip
+                label="Perguntas Frequentes"
+                helpText="Respostas para as perguntas mais comuns sobre o uso do RVA Hub e suas funcionalidades."
+              />
+            </div>
             <div className="space-y-4">
               {faqs.map((faq, index) => (
                 <details

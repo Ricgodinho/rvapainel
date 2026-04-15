@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
+import HelpTooltip from "@/components/HelpTooltip";
 import { ArrowRight, BookOpen, TrendingUp, Zap } from "lucide-react";
 
 export default function Index() {
@@ -71,6 +72,10 @@ export default function Index() {
               <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
                 Guias Ativas
               </h2>
+              <HelpTooltip
+                label="Guias Ativas"
+                helpText="Estas são as guias especializadas que estão disponíveis e prontas para uso. Clique em qualquer uma para começar a explorar suas funcionalidades."
+              />
               <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-primary/20 text-primary">
                 2 disponíveis
               </span>
@@ -124,6 +129,10 @@ export default function Index() {
               <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
                 Em Desenvolvimento
               </h2>
+              <HelpTooltip
+                label="Em Desenvolvimento"
+                helpText="Estas guias estão em desenvolvimento e serão lançadas em breve. Acompanhe as atualizações para quando ficarem disponíveis!"
+              />
               <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-400">
                 3 futuras
               </span>
