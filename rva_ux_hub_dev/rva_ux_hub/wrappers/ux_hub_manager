@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT=/opt/rva/modulos/rva_ux_hub/scripts/ux_hub_frontend_stack.sh
+
+usage() {
+  echo "uso: ux_hub_manager {start|stop|restart|status|logs|validate}"
+}
+
+cmd=${1:-}
+case ${cmd} in
+  start|stop|restart|status|logs|validate)
+    exec "${SCRIPT}" "${cmd}"
+    ;;
+  *)
+    usage
+    exit 1
+    ;;
+esac

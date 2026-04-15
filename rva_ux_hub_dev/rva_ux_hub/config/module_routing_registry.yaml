@@ -1,0 +1,44 @@
+version: 1
+module_owner: rva_ux_hub
+description: Registry inicial de roteamento manual do UX do RVA.
+maintenance_path: /opt/rva/modulos/rva_ux_hub/config/module_routing_registry.yaml
+
+help:
+  title: Ajuda do roteamento inicial
+  description: >
+    A guia principal deve ler as rotas ativas deste arquivo e publicar a
+    selecao manual inicial do UX. Novas rotas so devem entrar quando o
+    modulo correspondente ja tiver contrato documental e coerencia
+    operacional.
+  maintenance_path: /opt/rva/modulos/rva_ux_hub/config/module_routing_registry.yaml
+
+routes:
+  - route_key: geral
+    display_name: Geral
+    description: Entrada conversacional geral do RVA nesta fase inicial.
+    route_mode: general
+    target_module: rva_ux_hub
+    model_profile: general_light
+    model_id: qwen2.5:7b
+    enabled: true
+    sort_order: 10
+
+  - route_key: trade
+    display_name: Trade
+    description: Entrada inicial da guia conectada ao rva_trade_engine.
+    route_mode: module
+    target_module: rva_trade_engine
+    model_profile: trade_specialist
+    model_id: qwen2.5:7b
+    enabled: true
+    sort_order: 20
+
+# Runtime atual:
+# - LibreChat no modulo rva_ux_hub
+# - Ollama global em /opt/rva/containers/ollama
+#
+# Rotas futuras devem seguir o mesmo contrato.
+# Exemplos previstos:
+# - financeiro
+# - programming
+# - marketing

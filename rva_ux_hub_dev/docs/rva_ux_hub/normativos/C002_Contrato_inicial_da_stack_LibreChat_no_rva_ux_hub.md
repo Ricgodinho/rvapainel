@@ -11,7 +11,7 @@ Tipo de Documento: Normativo
 Macroprocesso: P300
 Microprocesso: C002
 Titulo: C002 - Contrato inicial da stack LibreChat no rva_ux_hub
-Status: Ativo
+Status: Descontinuado
 Data: 2026-04-11
 
 ## Objetivo

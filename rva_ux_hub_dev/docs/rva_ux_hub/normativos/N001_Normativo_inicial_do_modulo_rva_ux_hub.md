@@ -54,5 +54,4 @@ Nesta fase, o modulo nao cobre:
 
 ## Resultado esperado deste normativo
 Estabelecer a existencia oficial do `rva_ux_hub` como modulo do ecossistema
-RVA e fixar sua funcao inicial antes da implantacao do container do
-`LibreChat` e da evolucao futura do UX.
+RVA e fixar sua funcao inicial antes e da evolucao futura do UX.

@@ -42,6 +42,6 @@ O bootstrap do modulo usa como apoio principal:
 - `/opt/rva/documents/support/windows_apoio_inicial/global/normativos/M025.72_Definir_contrato_de_user_hint_e_override_manual_no_GSOL.md`
 
 Regra desta fase:
-
+-Durante a fase de laboratório controlado, o uso de .env local permanece tolerado como exceção transitória. Na promoção ao RVA principal, o módulo deverá absorver integralmente a normativa global de segredos e variáveis de ambiente.
 - o modulo aproveita apenas o necessario para roteamento inicial
 - `GSOL` completo continua fora de escopo nesta etapa

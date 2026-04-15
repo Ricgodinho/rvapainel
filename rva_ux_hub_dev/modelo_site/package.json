@@ -1,5 +1,5 @@
-
-  "name": "rva_ux_hub",
+{
+  "name": "fusion-starter",
   "private": true,
   "type": "module",
   "scripts": {
